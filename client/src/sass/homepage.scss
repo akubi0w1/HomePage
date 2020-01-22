@@ -1,0 +1,246 @@
+// layout color
+$base: #fff; // 70%
+$main: #343a40; // 25%
+$accent: #007bff; // 5%
+$primary: #007bff;
+$primary-hover: #0069d9;
+$light-gray: #efefef;
+
+// font-color
+$nav-link-color: rgba(255, 255, 255, 0.7);
+$nav-link-color-hover: rgba(255, 255, 255, 1.0);
+$info-color: #777;
+
+// border
+$border-width: 2px;
+$border-main: #ddd;
+$border-dark-main: #dedede;
+
+// table
+$table-cell-padding: .5rem 1rem;
+
+// css wrap
+html {
+    height: 100%;
+}
+
+body {
+    background-color: $base;
+    margin: 0px;
+}
+
+ul {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    display: inline-block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-weight: bold;
+}
+
+// table
+.table-basic {
+    border: $border-width solid $border-dark-main;
+    border-spacing: 0px;
+    box-sizing: border-box;
+    thead {
+        background-color: $light-gray;
+        th {
+            padding: $table-cell-padding;
+            border-right: $border-width solid $border-dark-main;
+            text-align: left;
+            &:last-child{
+                border-right: none;
+            }
+        }
+    }
+    tbody{
+        td {
+            padding: $table-cell-padding;
+            border-right: $border-width solid $border-dark-main;
+            border-top: $border-width solid $border-dark-main;
+            &:last-child{
+                border-right: none;
+            }
+        }
+    }
+    tr {
+        border-bottom: $border-width solid $border-dark-main;
+        &:nth-child(2n){
+            background-color: $light-gray;
+        }
+    }
+}
+
+.table-stripe {
+    border: $border-width solid $border-dark-main;
+    border-right: none;
+    border-left: none;
+    border-spacing: 0px;
+    box-sizing: border-box;
+    thead {
+        background-color: $light-gray;
+        th {
+            padding: $table-cell-padding;
+            text-align: left;
+            &:last-child{
+                border-right: none;
+            }
+        }
+    }
+    tbody{
+        td {
+            padding: $table-cell-padding;
+            border-top: $border-width solid $border-dark-main;
+            &:last-child{
+                border-right: none;
+            }
+        }
+    }
+    tr {
+        border-bottom: $border-width solid $border-dark-main;
+        &:nth-child(2n){
+            background-color: $light-gray;
+        }
+    }
+}
+
+.items-3 {
+    width: 33%;
+}
+
+
+// components
+.btn {
+    padding: .1rem .4rem;
+    font-size: 1em;
+    border-radius: 5px;
+    border: $border-width solid transparent;
+    outline: none;
+    display: inline-block;
+    &-primary{
+        color: #fff;
+        background-color: $primary;
+        border-color: $primary;
+        &:hover {
+            background-color: $primary-hover;
+            border-color: $primary-hover;
+        }
+    }
+}
+
+.card {
+    border: $border-width solid $border-main;
+    border-radius: 5px;
+    box-sizing: border-box;
+    &-header{
+        border-bottom: $border-width solid $border-main;
+        padding: .8rem 2rem;
+    }
+    &-content{
+        padding: .8rem 2rem;
+    }
+}
+
+// TODO: list
+.list {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .2rem;
+    &-title {
+        margin-left: .8rem;
+        margin-bottom: .5rem;
+    }
+    ul {
+        list-style: none;
+        border: $border-width solid $border-dark-main;
+        border-radius: 5px;
+    }
+    &-item {
+        padding: $table-cell-padding;
+        border-bottom: $border-width solid $border-dark-main;
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+}
+
+.flex-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+// layouts
+.header {
+    nav{
+        display: flex;
+        background-color: $main;
+        width: 100%;
+        padding: .8em 2em;
+        box-sizing: border-box;
+        justify-content: space-between;
+        .logo {
+            display: inline-flex;
+            color: $base;
+            font-size: 1.2em;
+        }
+        .menu{
+            display: inline-flex;
+            li {
+                list-style: none;
+                display: inline-block;
+            }
+            a {
+                color: $nav-link-color;
+                padding: .5em .5em;
+                text-decoration: none;
+                &:hover {
+                    color: $nav-link-color-hover;
+                }
+            }
+        }
+    }
+    .jambotron {
+        color: $base;
+        font-size: 1.8em;
+        display: flex;
+        background-color: $accent;
+        justify-content: center;
+        align-content: center;
+        padding: 5rem;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: .2rem 1.8rem;
+    border-top: $border-width solid $border-main;
+    margin: .5rem .5rem;
+    font-size: small;
+    color: $info-color;
+    div{
+        display: inline-block;
+    }
+}
+
+.container {
+    box-sizing: border-box;
+    .content{
+        max-width: 80%; // TODO: 調整？つうかブレイクポイントごとに計算
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        align-items: center;
+        // height: 200px;
+        // background-color: #ccc;
+    }
+}
+

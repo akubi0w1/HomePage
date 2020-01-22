@@ -1,0 +1,240 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  margin: 0px;
+}
+
+ul {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  display: inline-block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-weight: bold;
+}
+
+.table-basic {
+  border: 2px solid #dedede;
+  border-spacing: 0px;
+  box-sizing: border-box;
+}
+
+.table-basic thead {
+  background-color: #efefef;
+}
+
+.table-basic thead th {
+  padding: 0.5rem 1rem;
+  border-right: 2px solid #dedede;
+  text-align: left;
+}
+
+.table-basic thead th:last-child {
+  border-right: none;
+}
+
+.table-basic tbody td {
+  padding: 0.5rem 1rem;
+  border-right: 2px solid #dedede;
+  border-top: 2px solid #dedede;
+}
+
+.table-basic tbody td:last-child {
+  border-right: none;
+}
+
+.table-basic tr {
+  border-bottom: 2px solid #dedede;
+}
+
+.table-basic tr:nth-child(2n) {
+  background-color: #efefef;
+}
+
+.table-stripe {
+  border: 2px solid #dedede;
+  border-right: none;
+  border-left: none;
+  border-spacing: 0px;
+  box-sizing: border-box;
+}
+
+.table-stripe thead {
+  background-color: #efefef;
+}
+
+.table-stripe thead th {
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.table-stripe thead th:last-child {
+  border-right: none;
+}
+
+.table-stripe tbody td {
+  padding: 0.5rem 1rem;
+  border-top: 2px solid #dedede;
+}
+
+.table-stripe tbody td:last-child {
+  border-right: none;
+}
+
+.table-stripe tr {
+  border-bottom: 2px solid #dedede;
+}
+
+.table-stripe tr:nth-child(2n) {
+  background-color: #efefef;
+}
+
+.items-3 {
+  width: 33%;
+}
+
+.btn {
+  padding: .1rem .4rem;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  outline: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0069d9;
+}
+
+.card {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.card-header {
+  border-bottom: 2px solid #ddd;
+  padding: .8rem 2rem;
+}
+
+.card-content {
+  padding: .8rem 2rem;
+}
+
+.list {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 .2rem;
+}
+
+.list-title {
+  margin-left: .8rem;
+  margin-bottom: .5rem;
+}
+
+.list ul {
+  list-style: none;
+  border: 2px solid #dedede;
+  border-radius: 5px;
+}
+
+.list-item {
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #dedede;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.flex-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header nav {
+  display: flex;
+  background-color: #343a40;
+  width: 100%;
+  padding: .8em 2em;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.header nav .logo {
+  display: inline-flex;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.header nav .menu {
+  display: inline-flex;
+}
+
+.header nav .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.header nav .menu a {
+  color: rgba(255, 255, 255, 0.7);
+  padding: .5em .5em;
+  text-decoration: none;
+}
+
+.header nav .menu a:hover {
+  color: white;
+}
+
+.header .jambotron {
+  color: #fff;
+  font-size: 1.8em;
+  display: flex;
+  background-color: #007bff;
+  justify-content: center;
+  align-content: center;
+  padding: 5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: .2rem 1.8rem;
+  border-top: 2px solid #ddd;
+  margin: .5rem .5rem;
+  font-size: small;
+  color: #777;
+}
+
+.footer div {
+  display: inline-block;
+}
+
+.container {
+  box-sizing: border-box;
+}
+
+.container .content {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  align-items: center;
+}
