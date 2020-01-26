@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './css/homepage.css'
 
+import App from './js/App'
+
 ReactDOM.render(
-    <div className="box"></div>, document.getElementById('root'),
+    <App />, document.getElementById('root'),
 );

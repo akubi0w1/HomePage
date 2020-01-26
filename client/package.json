@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "react-router-dom": "^5.1.2"
   }
 }
