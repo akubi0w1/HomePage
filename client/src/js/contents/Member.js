@@ -10,7 +10,6 @@ class Member extends React.Component {
         return (
             <div className="content">
                 <h1 className="content-title h1-block">メンバー</h1>
-
                 <MemberGrade />
                 <MemberGraduate />
             </div>

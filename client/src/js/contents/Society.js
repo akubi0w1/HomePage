@@ -1,21 +1,53 @@
 import React from 'react'
+import axios from 'axios'
+import { BASE_URL } from '../constants/config'
 
 class Society extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            isFetching: false,
+            societies: [],
+        }
+    }
+
+    componentDidMount(){
+        this.setState({
+            isFetching: true
+        })
+        const self = this
+        axios.get(BASE_URL+"/societies")
+            .then(res => {
+                const _societies = res.data.societies
+                self.setState({
+                    societies: _societies,
+                })
+            })
+            .catch(err => {
+                console.log(err)
+            })
+            .then(() => {
+                self.setState({
+                    isFetching: false
+                })
+            })
     }
 
     render() {
         return(
             <div class="content">
                 <h1 className="content-title h1-block">学会発表</h1>
-                <SocietyTable/>   
+                {
+                    this.state.isFetching
+                    ? <p>NowLoading....</p>
+                    : <SocietyTable societies={this.state.societies} />
+                }   
             </div>
         )
     }
 }
 
-const SocietyTable = () => {
+const SocietyTable = (props) => {
     return (
         <table className="table-basic">
             <thead>
@@ -29,7 +61,7 @@ const SocietyTable = () => {
             </thead>
             <tbody>
                 {
-                    SOCIETIES.map((soc) => (
+                    props.societies.map((soc) => (
                         <SocietyRow society={soc}/>
                     ))
                 }

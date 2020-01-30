@@ -50,7 +50,7 @@ class News extends React.Component {
                 <div className="card-content">
                     {
                         NEWS.map((news) => (
-                            <NewsRow news={news} />
+                            <NewsRow key={news.id} news={news} />
                         ))
                     }
                 </div>
@@ -67,6 +67,7 @@ const NewsRow = (props) => {
 
 const NEWS = [
     {
+        id: 1,
         date: "2019/06/10",
         news: "ゼミ見学",
     },
@@ -112,7 +113,7 @@ const AboutLab = (props) => {
             <div className="mb-30">
                 <h2 className="h2-underline">ゼミ時間割(例)</h2>
                 <p>ゼミは、毎週木曜日に以下のうような予定で進行していきます。</p>
-                <table style={{ "border-spacing": ".8rem 0rem" }}>
+                <table style={{ "borderSpacing": ".8rem 0rem" }}>
                     <tbody>
                         <tr>
                             <td className="al-center">11:10</td>

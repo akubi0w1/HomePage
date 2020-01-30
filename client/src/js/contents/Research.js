@@ -1,21 +1,59 @@
 import React from 'react'
+import axios from 'axios'
+import { BASE_URL } from '../constants/config'
 
 class Research extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            researches: [],
+            isFetching: false
+        }
+    }
+
+    componentDidMount(){
+        this.setState({
+            isFetching: true
+        })
+        const self = this
+        axios.get(BASE_URL+"/researches")
+            .then(res=>{
+                const _researches = res.data.researches
+                // researchesが空だとnullでくるので。その対策
+                if (_researches) {
+                    self.setState({
+                        researches: _researches
+                    })
+                }
+            })
+            .catch(err=>{
+                console.log(err)
+                // TODO: redirect
+            })
+            .then(()=>{
+                self.setState({
+                    isFetching: false
+                })
+            })
+
     }
 
     render() {
         return (
             <div className="content">
                 <h1 className="content-title h1-block">卒業研究</h1>
-                <ResearchTable />
+                {
+                    this.state.isFetching
+                    ? <p>Now Loading...</p>
+                    : <ResearchTable researches={this.state.researches} />
+                }
             </div>
         )
     }
 }
 
-const ResearchTable = () => {
+const ResearchTable = (props) => {
+    console.log(props.researches)
     return (
         <table className="table-stripe">
             <thead>
@@ -29,7 +67,7 @@ const ResearchTable = () => {
             </thead>
             <tbody>
                 {
-                    RESEARCHES.map((res) => (
+                    props.researches.map((res) => (
                         <ResearchRow research={res} />
                     ))
                 }

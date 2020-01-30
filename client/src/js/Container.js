@@ -15,8 +15,15 @@ import Lecture from './contents/Lecture'
 import Login from './contents/Login'
 import PasswordEdit from './contents/PasswordEdit'
 
+// TODO: 一旦確認のため。消してね
+import Error from './contents/Error'
+
 // TODO: ここでルーティングするか、Appでルーティングするか...
 class Container extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
     render() {
         return (
             <div className="container">
@@ -135,6 +142,12 @@ class Container extends React.Component {
                             {...props}
                         />
                     }
+                />
+                {/* TODO: エラーの確認してるだけ。なので消してください */}
+                <Route
+                    exact
+                    path='/error'
+                    component={Error}
                 />
             </div>
         )

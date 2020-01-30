@@ -1,8 +1,35 @@
 import React from 'react'
+import axios from 'axios'
+import {BASE_URL} from '../constants/config'
 
 class Equipment extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            equipments: [],
+            isFetching: false,
+        }
+    }
+
+    componentDidMount() {
+        this.setState({
+            isFetching: true
+        })
+        const self = this
+        axios.get(BASE_URL+"/equipments") // ごめんないわ
+            .then(res => {
+                console.log(res)
+            })
+            .catch(err => {
+                console.log(err)
+                // TODO: errorページへ誘導
+            })
+            .then(()=> {
+                self.setState({
+                    isFetching: false
+                })
+            })
+
     }
 
     render() {

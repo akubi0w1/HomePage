@@ -175,6 +175,17 @@ body {
   border-color: #218838;
 }
 
+.btn-info {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+  border-color: #138496;
+}
+
 .card {
   border: 2px solid #ddd;
   border-radius: 5px;
