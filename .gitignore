@@ -40,9 +40,3 @@ node_modules/
 todo.md
 go/bin
 db/init.d/initdb.*.sql
-
-# Ignore go+react
-client/
-go/
-go.mod
-go.sum
