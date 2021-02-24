@@ -2,7 +2,7 @@
 
 ## 概要
 
-ラシキアゼミのホームページ。Railsからgolangへ書き換えやwiki,管理ドキュメントの作成などを行った。
+[ラシキアゼミのホームページ](http://www.lanet.sist.chukyo-u.ac.jp/)。Railsからgolangへ書き換えやwiki,管理ドキュメントの作成などを行った。
 
 ![](./img/top.png)
 
